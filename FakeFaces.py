@@ -29,14 +29,14 @@ config_default = """{
     "version": true
 }"""
 
-
-if not os.path.exists('config.json'):open('config.json', 'w', encoding='utf-8').write(config_default) # Create config.json
-
 configdata = json.loads(open('config.json', 'r', encoding='utf-8').read()) # Read config.json
 try:log_statut = configdata["log"]  # Read log data
 except:log_statut = True
 try:version = configdata["version"]  # Read log data
 except:version = True
+
+
+if not os.path.exists('config.json'):open('config.json', 'w', encoding='utf-8').write(config_default) # Create config.json
 
 def check_version():
     if version == True:
@@ -58,8 +58,9 @@ def check_version():
                             return False, f'Error while downloading the update ({dow})'
                     return True, 'Update completed successfully, please restart program'
                 else:return None, 'You have cancelled the update'
+            else:return None, 'No update available'
         except:return False, f'Error while downloading the update'
-    else:return None, 'No update available'
+    else:return None, 'You have deactivated updates'
 
 
 # ╭─────────────────────────── Def Fake Faces ───────────────────────────╮ #
@@ -101,14 +102,13 @@ def fake_faces(number=1, path='.', name=int(time.time())):
                     if log_statut == True:print(f'{reset}[{red}+{reset}] {red}An error has occurred! Retrying...{reset}') # Log Print
         if log_statut == True:print(f'{reset}[{green}+{reset}] {green}All {number} images have been downloaded!') # Log Print
         return True, picture_path
-    except:
+    except: 
         if log_statut == True:print(f'{reset}[{red}+{reset}] {red}An error has occurred!{reset}') # Failed 
         return False, []
-
 
 # ╭─────────────────────────── USAGE ───────────────────────────╮ #
 # ╭───────────── Optional ────────────╮ #
 # fake_faces(NB IMG, Path, 'File Name') #
 
 fake_faces() # You can use fake_faces function with 0 argument (default nb = 1, default path = '.', default file = timestamp)
-fake_faces(500, 'Fake/Faces', 'test') # Example
+fake_faces(50, 'Fake/Faces', 'test') # Example
