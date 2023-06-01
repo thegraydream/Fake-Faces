@@ -75,6 +75,10 @@ def fake_faces(number=1, path='.', name=int(time.time())):
         if version == True:
             if log_statut == True:print(f'{reset}[{green}-{reset}] Update search') # Log Print
             ver = check_version()
+            if ver[1] == "Update completed successfully, please restart program":
+                print('Update completed successfully, please restart program...')
+                while True:time.sleep(69)
+
             if log_statut == True:print(f'{reset}[{green}-{reset}] State: {ver[0]} - {ver[1]}') # Log Print
 
 
@@ -111,4 +115,4 @@ def fake_faces(number=1, path='.', name=int(time.time())):
 # fake_faces(NB IMG, Path, 'File Name') #
 
 fake_faces() # You can use fake_faces function with 0 argument (default nb = 1, default path = '.', default file = timestamp)
-fake_faces(50, 'Fake/Faces', 'test') # Example
+fake_faces(500, 'Fake/Faces', 'test') # Example
