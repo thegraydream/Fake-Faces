@@ -1,6 +1,14 @@
 # 🎀 Fake Faces Generator
 This program allows you to generate the faces of non-existent people super-fast!
 
+# 👻 Example
+![FakeFace0](https://github.com/thegraydream/Fake-Faces/assets/125685786/843f82b6-2232-410c-a88c-c63ff85ccdae)
+![FakeFace1](https://github.com/thegraydream/Fake-Faces/assets/125685786/7eafe82d-674b-4c8b-9f02-b94fb8f78523)\
+![FakeFace2](https://github.com/thegraydream/Fake-Faces/assets/125685786/cf38f3ee-11d7-491a-bd1a-d890ce0873b9)
+![FakeFace3](https://github.com/thegraydream/Fake-Faces/assets/125685786/158c86c4-cda5-4c3b-b314-bc4079b55d59)
+
+
+
 # 🔧 Easy Installation 
 All you need to install the program is python 3! 
 The modules will install automatically!
