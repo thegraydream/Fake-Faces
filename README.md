@@ -1,3 +1,4 @@
+![Badge](https://img.shields.io/badge/Fake%20Faces-Python-blue.svg)
 # 🎀 Fake Faces Generator
 This program allows you to generate the faces of non-existent people super-fast!
 
