@@ -29,6 +29,7 @@ config_default = """{
     "version": true
 }"""
 
+if not os.path.exists('config.json'):open('config.json', 'w', encoding='utf-8').write(config_default) # Create config.json
 configdata = json.loads(open('config.json', 'r', encoding='utf-8').read()) # Read config.json
 try:log_statut = configdata["log"]  # Read log data
 except:log_statut = True
@@ -36,7 +37,7 @@ try:version = configdata["version"]  # Read log data
 except:version = True
 
 
-if not os.path.exists('config.json'):open('config.json', 'w', encoding='utf-8').write(config_default) # Create config.json
+
 
 def check_version():
     if version == True:
